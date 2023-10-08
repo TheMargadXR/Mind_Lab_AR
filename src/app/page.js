@@ -1,5 +1,6 @@
-import Image from "next/image";
+import Hero from "./components/Hero";
 import Head from "next/head";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
@@ -13,7 +14,11 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
-      <h1>hello world</h1>
+      <Navbar />
+      <Hero
+        heading="Augmented Reality x Education"
+        massage="Augmented Reality technology is the next step in education"
+      />
     </div>
   );
 }
