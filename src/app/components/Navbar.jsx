@@ -1,7 +1,7 @@
 "use client";
 // import { useRouter } from "next/navigation";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
