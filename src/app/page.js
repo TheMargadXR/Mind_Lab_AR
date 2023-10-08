@@ -15,10 +15,7 @@ export default function Home() {
         />
       </Head>
       <Navbar />
-      <Hero
-        heading="Augmented Reality x Education"
-        massage="Augmented Reality technology is the next step in education"
-      />
+      <Hero />
     </div>
   );
 }
