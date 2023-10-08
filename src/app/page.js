@@ -1,6 +1,11 @@
-import Hero from "./components/Hero";
+import Main from "./components/Main";
 import Head from "next/head";
 import Navbar from "./components/Navbar";
+import Contact from "./components/Contact";
+import About from "./components/About";
+import About2 from "./components/About2";
+import Footer from "./components/Footer";
+import Team from "./components/Team";
 
 export default function Home() {
   return (
@@ -15,7 +20,12 @@ export default function Home() {
         />
       </Head>
       <Navbar />
-      <Hero />
+      <Main />
+      <About />
+      <Team />
+      <About2 />
+      <Contact />
+      <Footer />
     </div>
   );
 }

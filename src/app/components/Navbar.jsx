@@ -1,19 +1,33 @@
 "use client";
 // import { useRouter } from "next/navigation";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [color, setColor] = useState("transparent");
 
   const handleNav = () => {
     setNav(!nav);
   };
+  useEffect(() => {
+    const changeColor = () => {
+      if (window.scrollY >= 90) {
+        setColor("#ffffff");
+      } else {
+        setColor("transparent");
+      }
+    };
+    window.addEventListener("scroll", changeColor);
+  }, []);
 
   return (
-    <div className="fixed left-0 top-0 w-full z-10 ease-in duration-300">
-      <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-white">
+    <div
+      style={{ backgroundColor: `${color}` }}
+      className="fixed left-0 top-0 w-full z-10 ease-in duration-300 "
+    >
+      <div className="max-w-[1240px] m-auto flex justify-between items-center p-2 text-white">
         <div className="flex">
           <h1 className="font-bold text-4xl text-[#0099CC]">Mind </h1>
           <Link href="/">
@@ -22,23 +36,22 @@ const Navbar = () => {
         </div>
 
         <ul className="hidden sm:flex">
-          <li className="p-4 text-black ease-in duration-200 hover:text-[#0099CC]">
-            <Link href="/">Home</Link>
+          <li className="p-4 text-black ease-in duration-100 hover:text-[#0099CC]">
+            <Link href="/#main">Home</Link>
           </li>
-          <li className="p-4 text-black ease-in duration-200 hover:text-[#0099CC]">
-            <Link href="/">Learn more</Link>
+          <li className="p-4 text-black ease-in duration-100 hover:text-[#0099CC]">
+            <Link href="/#learnMore">Learn more</Link>
           </li>
-          <li className="p-4 text-black ease-in duration-200 hover:text-[#0099CC]">
-            <Link href="/#about">About</Link>
+          <li className="p-4 text-black ease-in duration-100 hover:text-[#0099CC]">
+            <Link href="/#team">Team</Link>
           </li>
-          <li className="p-4 text-black ease-in duration-200 hover:text-[#0099CC]">
-            <Link href="/team">Team</Link>
+          <li className="p-4 text-black ease-in duration-100 hover:text-[#0099CC]">
+            <Link href="/#contact">Contact</Link>
           </li>
-          <button className="p-4  text-black bg-[#0099CC] ease-in duration-200  rounded-md  hover:bg-[#003366] hover:text-white">
+          <button className="p-4  text-black bg-[#0099CC] ease-in duration-100  rounded-md  hover:bg-[#003366] hover:text-white">
             <Link href="/enroll">EnRoll Now</Link>
           </button>
         </ul>
-
         {/* Mobile Button */}
         <div onClick={handleNav} className="block sm:hidden z-10">
           {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
