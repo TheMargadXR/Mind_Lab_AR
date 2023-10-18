@@ -7,7 +7,7 @@ const About2 = () => {
       <div id="about">
         <div className="p-10">
           <div>
-            <h2 className="flex justify-center text-2xl text-[#0099CC]">
+            <h2 className="text-center text-3xl text-[#0099CC]">
               Why was Mind Lab created ?
             </h2>
           </div>

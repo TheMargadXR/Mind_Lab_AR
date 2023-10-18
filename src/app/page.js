@@ -3,7 +3,8 @@ import Head from "next/head";
 import Navbar from "./components/Navbar";
 import Contact from "./components/Contact";
 import About from "./components/About";
-import About2 from "./components/About2";
+import ARtryOn from "./components/Artry";
+import WhatIsMindlab from "./components/About2";
 import Footer from "./components/Footer";
 import Team from "./components/Team";
 
@@ -22,8 +23,9 @@ export default function Home() {
       <Navbar />
       <Main />
       <About />
+      <ARtryOn />
       <Team />
-      <About2 />
+      <WhatIsMindlab />
       <Contact />
       <Footer />
     </div>

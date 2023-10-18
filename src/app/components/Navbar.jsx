@@ -49,7 +49,7 @@ const Navbar = () => {
             <Link href="/#contact">Contact</Link>
           </li>
           <button className="p-4  text-black bg-[#0099CC] ease-in duration-100  rounded-md  hover:bg-[#003366] hover:text-white">
-            <Link href="/enroll">EnRoll Now</Link>
+            <Link href="#">EnRoll Now</Link>
           </button>
         </ul>
         {/* Mobile Button */}
